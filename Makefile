@@ -16,7 +16,7 @@ BUILD_TIME?=$(shell date -u '+%Y-%m-%d_%H:%M:%S')
 
 # Parameters to push images and release app to Kubernetes or try it with Docker
 REGISTRY?=docker.io/webdeva
-NAMESPACE?=rumyantseva
+NAMESPACE?=flamerior
 CONTAINER_NAME?=${NAMESPACE}-${APP}
 CONTAINER_IMAGE?=${REGISTRY}/${CONTAINER_NAME}
 VALUES?=values-stable

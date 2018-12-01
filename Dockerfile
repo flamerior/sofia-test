@@ -12,7 +12,7 @@ WORKDIR /go/src/sofia-test
 
 # build the binary with go build
 RUN CGO_ENABLED=0 go build \
-	-ldflags "-s -w -X sofia-test/internal/version.Version=${RELEASE}" \
+	-ldflags "-s -w -X github.com/flamerior/sofia-test/internal/version.Version=${RELEASE}" \
 	-o bin/go-sofia sofia-test/cmd/go-sofia
 
 # Stage 2. Run the binary
