@@ -2,7 +2,7 @@
 GOOS?=linux
 GOARCH?=amd64
 
-PROJECT?=github.com/rumyantseva/go-sofia
+PROJECT?=github.com/flamerior/sofia-test
 BUILD_PATH?=cmd/go-sofia
 APP?=go-sofia
 

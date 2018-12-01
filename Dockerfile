@@ -6,14 +6,14 @@ ENV RELEASE 0.0.1
 # add a non-privileged user
 RUN useradd -u 10001 myapp
 
-RUN mkdir -p /go/src/github.com/rumyantseva/go-sofia
-ADD . /go/src/github.com/rumyantseva/go-sofia
-WORKDIR /go/src/github.com/rumyantseva/go-sofia
+RUN mkdir -p /go/src/sofia-test
+ADD . /go/src/sofia-test
+WORKDIR /go/src/sofia-test
 
 # build the binary with go build
 RUN CGO_ENABLED=0 go build \
 	-ldflags "-s -w -X github.com/rumyantseva/go-sofia/internal/version.Version=${RELEASE}" \
-	-o bin/go-sofia github.com/rumyantseva/go-sofia/cmd/go-sofia
+	-o bin/go-sofia sofia-test/cmd/go-sofia
 
 # Stage 2. Run the binary
 FROM scratch
