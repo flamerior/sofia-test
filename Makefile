@@ -4,7 +4,7 @@ GOARCH?=amd64
 
 PROJECT?=github.com/flamerior/sofia-test
 BUILD_PATH?=cmd/go-sofia
-APP?=go-sofia
+APP?=sofia-test
 
 PORT?=8000
 DIAG_PORT?=3001
