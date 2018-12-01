@@ -115,7 +115,7 @@ func hello(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Couldn't create a k8s client: %v", err)
 	}
 
-	podlist, err := c.Core().Pods("rumyantseva").List(meta.ListOptions{})
+	podlist, err := c.Core().Pods("flamerior").List(meta.ListOptions{})
 	if err != nil {
 		w.Header().Set("Content-Type", "application/json; charset=utf-8")
 		w.WriteHeader(http.StatusInternalServerError)

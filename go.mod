@@ -1,4 +1,4 @@
-module github.com/rumyantseva/go-sofia
+module github.com/flamerior/sofia-test
 
 require (
 	github.com/gogo/protobuf v1.1.1 // indirect

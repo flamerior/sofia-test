@@ -3,7 +3,7 @@ description: A Helm charts for Kubernetes application
 version: 0.0.5
 home: https://k8s.community/
 sources:
-  - https://github.com/rumyantseva/go-sofia
+  - https://github.com/flamerior/sofia-test
 maintainers:
   - name: Kubernetes Community Authors
     email: k8s.community@gmail.com
