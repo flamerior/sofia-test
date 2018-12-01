@@ -11,8 +11,8 @@ import (
 	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/rumyantseva/go-sofia/internal/diagnostics"
-	"github.com/rumyantseva/go-sofia/internal/version"
+	"sofia-test/internal/diagnostics"
+	"sofia-test/internal/version"
 	meta "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"

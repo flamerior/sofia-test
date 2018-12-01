@@ -12,7 +12,7 @@ WORKDIR /go/src/sofia-test
 
 # build the binary with go build
 RUN CGO_ENABLED=0 go build \
-	-ldflags "-s -w -X github.com/rumyantseva/go-sofia/internal/version.Version=${RELEASE}" \
+	-ldflags "-s -w -X sofia-test/internal/version.Version=${RELEASE}" \
 	-o bin/go-sofia sofia-test/cmd/go-sofia
 
 # Stage 2. Run the binary
@@ -26,7 +26,7 @@ COPY --from=0 /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=0 /etc/passwd /etc/passwd
 USER myapp
 
-COPY --from=0 /go/src/github.com/rumyantseva/go-sofia/bin/go-sofia /go-sofia
+COPY --from=0 /go/src/sofia-test/bin/go-sofia /go-sofia
 EXPOSE $PORT
 EXPOSE $DIAG_PORT
 
